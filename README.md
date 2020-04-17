@@ -2,7 +2,10 @@
 =============
 
  Updates:
-
+ 
++ V.1.4
+  + DDoS Script
+  + Lan IP's Scan
 + V.1.0
 
 ![](https://cdn.discordapp.com/attachments/681123335115243551/698192432831135874/1a537c27d1217957.PNG)
