@@ -86,7 +86,7 @@ if __name__ == '__main__':
     print('\nScanning...\n')
     print('0%')
     lst = map_network()
-    print(lst)
+    #print(lst)
     colv = len(lst)
     print('\n  Found {} Local IP'.format(colv))
     print()
